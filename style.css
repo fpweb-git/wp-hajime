@@ -1,0 +1,28 @@
+/* 
+    Theme Name: Hajime
+    Author: fp
+    Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    min-height: 100vh;
+    background: rgb(35, 43, 59);
+    background: linear-gradient(148deg, rgba(35, 43, 59, 1) 0%, rgba(53, 53, 93, 1) 59%, rgb(64, 42, 105) 100%);
+}
+
+body {
+    position: relative;
+}
+
+:root {
+    --primary: #fdd835 !important;
+    --primary-hover: #fbc02d !important;
+    --primary-focus: rgba(253, 216, 53, 0.125) !important;
+    --primary-inverse: rgba(0, 0, 0, 0.75) !important;
+}
