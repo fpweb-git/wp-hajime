@@ -14,6 +14,19 @@ while (have_posts()) {
                     <li><small><?php the_title(); ?></small></li>
                 </ul>
             </nav>
+        <?php } else {
+        ?>
+            <nav style="float: right;">
+                <ul>
+                    <small>
+                        <?php wp_list_pages(array(
+                            'title_li' => '',
+                            'child_of' => get_the_ID(),
+                            'sort_column' => 'menu_order'
+                        )); ?>
+                    </small>
+                </ul>
+            </nav>
         <?php }
         ?>
         <h2><?php the_title(); ?></h2>

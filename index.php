@@ -1,14 +1,18 @@
-<?php
-get_header();
-while (have_posts()) {
-    the_post(); ?>
-    <main class="container">
-        <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-        <?php the_content() ?>
-        <hr>
-    </main>
-<?php }
-get_footer();
-
-?>
+<?php get_header(); ?>
+<main class="container">
+    <h2>All articles</h2>
+    <?php
+    while (have_posts()) {
+        the_post(); ?>
+        <article>
+            <header>
+                <h3 style="margin-bottom: 0px;"><?php the_title() ?></h3>
+                <a style="float: right;" href="<?php the_permalink() ?>"><button role="button" class="outline">Read</button></a>
+            </header>
+            <?php the_content() ?>
+        </article>
+    <?php }
+    ?>
+</main>
+<?php get_footer(); ?>
 <!-- end -->
